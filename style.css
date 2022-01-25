@@ -335,6 +335,14 @@ footer i {
   margin: 0px 5px;
 }
 
+#sidenav{
+    display: none;
+}
+
+#menubar{
+    display: none;
+}
+
 @media only screen and (max-width: 769px) {
   .nav1 {
     position: relative;
@@ -378,13 +386,132 @@ footer i {
   }
 
   .card-container {
+    display: inline-block;
     margin: 2rem 0;
   }
 
-  .card-container .card{
-      flex-basis: 100%;
-      text-align: center;
+  .card-container .card {
+    flex-basis: 100%;
+    text-align: center;
   }
 
+  .card-container .card img{
+      width: 100%;
+  }
+
+  .trends{
+      padding: 20px 50px;
+  }
+
+  .trends .swiper-slide{
+      width: 360px;
+      height: 360px;
+  }
+
+  footer div {
+    flex-basis: 50%;
+    margin: 10px 0;
+  }
+
+  #sidenav{
+      display: block;
+  }
+
+  #menubar{
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0%,-50%);
+      z-index: 99;
+      background-color: var(--primary);
+      color: white;
+      font-size: 2rem;
+      padding: 20px 10px;
+      animation: animate 5s ease infinite;
+  }
+
+  @keyframes animate {
+      0%{
+          background-color: var(--secondary);
+      }
+
+      100%{
+          background-color: var(--primary);
+      }
+
+  }
+
+  #sidenav {
+    /* border: 5px solid red; */
+    width: 0px;
+    height: 100vh;
+    /* line-height: 70px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: var(--light);
+    padding-top: 70px;
+    display: block;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
   
+  #sidenav ul {
+    list-style: none;
+    /* text-align: center; */
+  }
+  
+  #sidenav ul li {
+    /* border: 1px solid red; */
+    display: block;
+    width: 200px;
+    position: relative;
+    z-index: 99;
+    margin: 10px 20px;
+  }
+  
+  #sidenav ul li a {
+    /* border: 1px solid purple; */
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    display: block;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  
+  #sidenav ul li a:hover {
+    color: var(--primary);
+  }
+  
+  #sidenav ul li i {
+    color: white;
+    margin: 0px 5px;
+  }
+  
+  /* Drop Down Menu */
+  /* ================================================= */
+  
+  #sidenav ul ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+  }
+  
+  #sidenav ul ul li {
+    background-color: var(--light);
+    border-bottom: 1px solid white;
+  }
+  
+  #sidenav ul li:hover>ul {
+    display: block;
+  }
+  
+  /* ================================================== */
+
+
+
 }

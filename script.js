@@ -15,3 +15,15 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
     },
 });
+
+let sideNav = document.querySelector('#sidenav');
+let menuBar = document.querySelector('#menubar');
+
+sideNav.style.width="0px";
+menuBar.onclick=function(){
+    if(sideNav.style.width == "0px"){
+        sideNav.style.width="250px";
+    } else{
+        sideNav.style.width="0px";
+    }
+}
